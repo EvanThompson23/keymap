@@ -28,10 +28,9 @@
             bindings = <
 &trans  &kp EXCL  &kp AT  &kp POUND  &kp DOLLAR  &kp PERCENT    &kp CARET     &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK  &trans
 &trans  &trans    &trans  &trans     &trans      &trans         &kp KP_MINUS  &kp KP_EQUAL   &kp LBKT              &kp RBKT               &kp BSLH      &kp GRAVE
-&trans  &trans    &trans  &trans     &trans      &trans         &kp UNDER     &kp PLUS       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE      &kp GRAVE
+&trans  &trans    &trans  &trans     &trans      &trans         &kp UNDER     &kp PLUS       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE      &kp TILDE
                           &trans     &trans      &trans         &trans        &trans         &trans
             >;
         };
     };
 };
-
