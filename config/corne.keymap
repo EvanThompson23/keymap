@@ -3,15 +3,28 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        HomeRow: HomeRow {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            quick-tap-ms = <175>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
             bindings = <
-&kp TAB    &kp Q       &kp W           &kp E             &kp R        &kp T        &kp Y    &kp U        &kp I              &kp O            &kp P               &kp BSPC
-&kp ESC    &mt LCMD A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G        &kp H    &mt RCTRL J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RCMD SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z       &kp X           &kp C             &kp V        &kp B        &kp N    &kp M        &kp COMMA          &kp DOT          &kp FSLH            &none
-                                       &none             &lt 1 ESC    &kp SPACE    &kp RET  &lt 2 ESC    &kp BACKSPACE
+&kp TAB    &kp Q            &kp W                &kp E                  &kp R             &kp T        &kp Y    &kp U             &kp I                   &kp O                 &kp P                    &kp BSPC
+&kp ESC    &HomeRow LCMD A  &HomeRow LEFT_ALT S  &HomeRow LEFT_SHIFT D  &HomeRow LCTRL F  &kp G        &kp H    &HomeRow RCTRL J  &HomeRow RIGHT_SHIFT K  &HomeRow RIGHT_ALT L  &HomeRow RCMD SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z            &kp X                &kp C                  &kp V             &kp B        &kp N    &kp M             &kp COMMA               &kp DOT               &kp FSLH                 &none
+                                                 &kp TAB                &lt 1 ESC         &kp SPACE    &kp RET  &lt 2 ESC         &kp BACKSPACE
             >;
         };
 
